@@ -1,8 +1,18 @@
 .home {
   width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .home_image {
   width: 100%;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
+  margin-bottom: -180px;
+}
+
+.home_row {
+  display: flex;
+  z-index: 1;
+  margin: 0 5px;
 }
