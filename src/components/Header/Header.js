@@ -52,7 +52,10 @@ function Header() {
       {/* Cart */}
       <Link to="/checkout" className="header_link">
         <div className="header_optionCart">
-          <ShoppingBasketIcon />
+          <div className="header_Cart">
+            <ShoppingBasketIcon />
+            <span className="header_optionLineTwo header_cartCount">Cart</span>
+          </div>
           <span className="header_optionLineTwo header_cartCount">
             {cart?.length}
           </span>
