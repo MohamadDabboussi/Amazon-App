@@ -1,5 +1,10 @@
 export const initialState = {
   cart: [],
+  user: null,
+};
+
+export const getCartTotal = (cart) => {
+  return cart?.reduce((amount, item) => item.price + amount, 0);
 };
 
 function reducer(state, action) {
@@ -9,10 +14,11 @@ function reducer(state, action) {
         ...state,
         cart: [...state.cart, action.payload],
       };
-    case "REMOVE_FROM _CART":
+    case "REMOVE_FROM_CART":
+      console.log(...state.cart);
       return {
         ...state,
-        cart: [...state.cart].filter((state.cart.id = action.payload.id)),
+        cart: [...state.cart].filter((item) => item.id !== action.payload.id),
       };
     default:
       return state;
